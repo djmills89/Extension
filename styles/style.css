@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf');
+}
+
+:root {
+    /* neutral colors */
+    --neutral-900: hsl(227, 75%, 14%);
+    --neutral-800: hsl(226, 25%, 17%);
+    --neutral-700: hsl(225, 23%, 24%);
+    --neutral-600: hsl(226, 11%, 37%);
+    --neutral-300: hsl(0, 0%, 78%);
+    --neutral-200: hsl(217, 61%, 90%);
+    --neutral-100: hsl(0, 0%, 93%);
+    --neutral-0: hsl(200, 60%, 99%);
+
+    /* red colors */
+    --red-400: hsl(3, 86%, 64%);
+    --red-500: hsl(3, 71%, 56%);
+    --red-700: hsl(3, 77%, 44%);
+
+    /* gradients */
+    --light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%)`;
+
+    /* font */
+    --ff-base: 'Noto Sans', sans-serif;
+
+    --fs-normal: 1.6rem;
+
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-heavy: 700;
+
+    /* toggle-size */
+    --toggle-switch-size: 1.6rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    background-color: grey;
+    border-radius: 1rem;
+    margin: 2rem;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.toggle-slider {
+    justify-self: end;
+
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 2.4rem;
+    
+}
+
+.toggle-slider input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--neutral-200);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: var(--toggle-switch-size);
+    width: var(--toggle-switch-size);
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--neutral-0);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: var(--red-700);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(var(--toggle-switch-size));
+    -ms-transform: translateX(var(--toggle-switch-size));
+    transform: translateX(var(--toggle-switch-size));
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

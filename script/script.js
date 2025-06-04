@@ -24,6 +24,9 @@ function generateCard(item) {
     logo.src = item.logo
     logo.classList.add('logo')
 
+    let cardText = document.createElement('div')
+    cardText.classList.add('card-text-container')
+
     let cardTitle = document.createElement('h2')
     cardTitle.textContent = item.name
     cardTitle.classList.add('card-title')
@@ -36,12 +39,19 @@ function generateCard(item) {
     removeBtn.textContent = 'Remove'
     removeBtn.classList.add('remove-btn')
 
-    let toggle = document.createElement('input')
-    toggle.type = 'checkbox'
-    toggle.checked = item.isActive
+    let toggle = document.createElement('label')
     toggle.classList.add('toggle-slider')
 
-    card.append(logo, cardTitle, cardBody, removeBtn, toggle)
+    let checkbox = document.createElement('input')
+    checkbox.type = 'checkbox'
+    checkbox.checked = item.isActive
+
+    let toggleSwitch = document.createElement('span')
+    toggleSwitch.classList.add('slider', 'round')
+
+    toggle.append(checkbox, toggleSwitch)
+    cardText.append(cardTitle, cardBody)
+    card.append(logo, cardText, removeBtn, toggle)
     return card
 }
 
