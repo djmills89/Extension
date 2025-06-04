@@ -1,3 +1,17 @@
+const themeToggle = document.getElementById('themeToggle')
+themeToggle.addEventListener('click', () => {
+    const root = document.documentElement
+    const isLight = root.classList.contains('light-theme')
+
+    root.classList.toggle('light-theme', !isLight)
+    root.classList.toggle('dark-theme', isLight)
+
+    themeToggle.src = isLight
+        ? '../assets/images/icon-sun.svg'
+        : '../assets/images/icon-moon.svg'
+})
+
+
 const extensionContainer = document.getElementById('container')
 fetch('../data.json')
     .then(response => response.json())

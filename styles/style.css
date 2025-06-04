@@ -73,7 +73,7 @@ header {
 
 h1 {
     margin-block-end: var(--space-200);
-    color: var(--neutral-900);
+    color: var(--title-color);
 }
 
 h2 {
@@ -82,7 +82,7 @@ h2 {
 
 /* theme styles */
 .light-theme {
-    --body-bg-color: var(--neutral-200);
+    --body-bg-color: var(--light-gradient);
     --text-color-main: var(--neutral-600);
     --element-bg-color: var(--neutral-0);
     --accent-color: var(--red-700);
@@ -93,6 +93,7 @@ h2 {
     --border-color: var(--neutral-300);
     --box-shadow-color: var(--neutral-300);
     --theme-toggle-bg-color: var(--neutral-100);
+    --title-color: var(--neutral-900);
 }
 .dark-theme {
     --body-bg-color: var(--dark-gradient);
@@ -106,6 +107,7 @@ h2 {
     --border-color: var(--neutral-600);
     --box-shadow-color: transparent;
     --theme-toggle-bg-color: var(--neutral-600);
+    --title-color: var(--neutral-0);
 }
 
 /* Filter Buttons Styles */
@@ -130,6 +132,7 @@ h2 {
 .filter-btn.active {
     background-color: var(--accent-color);
     color: var(--filter-active-button-color);
+    border: none;
 }
 
 /* Header Image Syles */
