@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -16,11 +16,18 @@
 </head>
 <body>
 
-  Extensions List
-
-  All
-  Active
-  Inactive
+  <header>
+    <div class="img-wrapper">
+      <img src="./assets/images/logo.svg" alt="Site Logo">
+      <img class="theme-toggle" src="./assets/images/icon-moon.svg" alt="Dark theme toggle">
+    </div>
+    <h1>Extensions List</h1>
+    <div class="button-wrapper">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Active</button>
+      <button class="filter-btn">Inactive</button>
+    </div>
+  </header>
 
   <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
   <main id="container"></main>
