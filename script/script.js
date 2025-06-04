@@ -38,6 +38,7 @@ function generateCard(item) {
 
     let toggle = document.createElement('input')
     toggle.type = 'checkbox'
+    toggle.checked = item.isActive
     toggle.classList.add('toggle-slider')
 
     card.append(logo, cardTitle, cardBody, removeBtn, toggle)
