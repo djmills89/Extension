@@ -80,10 +80,20 @@ h2 {
     font-size: var(--fs-subhead);
 }
 
+button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-hover-color);
+}
+
+button:focus {
+    outline: 1px solid var(--accent-color);
+}
+
 /* theme styles */
 .light-theme {
     --body-bg-color: var(--light-gradient);
     --text-color-main: var(--neutral-600);
+    --text-hover-color: var(--neutral-0);
     --element-bg-color: var(--neutral-0);
     --accent-color: var(--red-700);
     --slider-bg-color: var(--neutral-300);
@@ -98,6 +108,7 @@ h2 {
 .dark-theme {
     --body-bg-color: var(--dark-gradient);
     --text-color-main: var(--neutral-0);
+    --text-hover-color: var(--neutral-900);
     --element-bg-color: var(--neutral-700);
     --accent-color: var(--red-400);
     --slider-bg-color: var(--neutral-600);
@@ -119,7 +130,6 @@ h2 {
 
 .filter-btn {
     background-color: var(--filter-btn-bg-color);
-    font-size: var(--fs-normal);
     padding-inline: var(--space-200);
     padding-block: var(--space-150);
     font-size: 1.8rem;
@@ -128,6 +138,7 @@ h2 {
     border: 1px solid var(--border-color);
     box-shadow: 0 1px 1px var(--box-shadow-color);
     color: var(--filter-btn-color);
+    cursor: pointer;
 }
 .filter-btn.active {
     background-color: var(--accent-color);
@@ -152,6 +163,7 @@ h2 {
     background-color: var(--theme-toggle-bg-color);
     padding: 1.25rem;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 /* Card Styles */
